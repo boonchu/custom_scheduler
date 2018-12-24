@@ -72,14 +72,3 @@ scheduler
 2016/08/19 11:16:35 Stopped reconciliation loop.
 2016/08/19 11:16:35 Stopped scheduler.
 ```
-
-> Notice the pending nginx pod is deployed to the node with the lowest cost.
-
-## Run the Scheduler on Kubernetes
-
-```
-kubectl create -f deployments/scheduler.yaml
-```
-``` 
-deployment "scheduler" created
-```
