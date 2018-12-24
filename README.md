@@ -1,6 +1,9 @@
-# scheduler
+# Custom Scheduler
 
 Toy scheduler for use in Kubernetes demos.
+
+Advise for testing with tmux since multi sessions 
+will gain more visuals.
 
 ## Step 1: Launch kube-proxy to listen at 8001.
 
@@ -57,6 +60,8 @@ $ ./custom_scheduler
 2018/12/23 22:26:13 Starting custom scheduler...
 2018/12/23 22:26:16 Successfully assigned nginx-758fdd8bb8-dhg49 to kubenode-1.k8s.local
 ```
+
+### Custom test lab.
 
 Confirm that 'ngnix' changes the 'pending' to 'running' state.
 
