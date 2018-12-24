@@ -7,21 +7,9 @@ will gain more visuals.
 
 ## Step 1: Launch kube-proxy to listen at 8001.
 
-Annotate each node using the annotator command:
-
 ```
 $ kubectl proxy --address=127.0.0.1 --port=8001
 Starting to serve on 127.0.0.1:8001
-```
-
-Test run the annotator to see the workload.
-
-```
-$ go run annotator/main.go
-kubectl-1.k8s.local 1.60
-kubenode-1.k8s.local 0.10
-kubenode-2.k8s.local 0.80
-kubenode-3.k8s.local 1.60
 ```
 
 ### Step 2: Create a 'nginx' deployment.
