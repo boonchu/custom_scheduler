@@ -15,9 +15,7 @@ Starting to serve on 127.0.0.1:8001
 ### Step 2: Create a 'nginx' deployment.
 
 ```
-kubectl create -f deployments/nginx.yaml
-```
-```
+$ kubectl create -f deployments/nginx.yaml
 deployment "nginx" created
 ```
 
@@ -29,7 +27,7 @@ NAME                     READY   STATUS    RESTARTS   AGE
 nginx-758fdd8bb8-dhg49   0/1     Pending   0          23s
 ```
 
-### Run the Scheduler
+### Step 3: Run the Scheduler
 
 List the nodes and note the price of each node.
 
@@ -44,14 +42,15 @@ kubenode-3.k8s.local 1.60
 Run the best price scheduler:
 
 ```
+$ ./build_scheduler
 $ ./custom_scheduler
 2018/12/23 22:26:13 Starting custom scheduler...
 2018/12/23 22:26:16 Successfully assigned nginx-758fdd8bb8-dhg49 to kubenode-1.k8s.local
 ```
 
-### Custom test lab.
+### Step 4: Run lab test.
 
-Confirm that 'ngnix' changes the 'pending' to 'running' state.
+Confirm that 'ngnix' changes the 'pending' to 'running' state since schedule is up and running.
 
 ```
 $ kubectl get pods  -l app=nginx
