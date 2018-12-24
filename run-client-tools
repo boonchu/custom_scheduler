@@ -1,0 +1,10 @@
+GOPATH="$PWD/gopath/." go get k8s.io/client-go/ 
+GOPATH="$PWD/gopath/." go get k8s.io/apimachinery/
+GOPATH="$PWD/gopath/." go get k8s.io/api/storage/
+GOPATH="$PWD/gopath/." go get k8s.io/api/rbac/
+GOPATH="$PWD/gopath/." go get k8s.io/api/scheduling/
+GOPATH="$PWD/gopath/." go get github.com/google/gofuzz
+GOPATH="$PWD/gopath/." go get k8s.io/klog/
+GOPATH="$PWD/gopath/." go get golang.org/x/net/context
+
+GOPATH="$PWD:$PWD/gopath/." go run client-tools/main.go
